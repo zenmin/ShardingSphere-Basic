@@ -27,7 +27,7 @@ class ShardingDemoApplicationTests {
 
     @Test
     void msWrite() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 200; i++) {
             User user = new User("用户" + i, i % 2 + 10);
             userMapper.insert(user);
         }
@@ -35,7 +35,7 @@ class ShardingDemoApplicationTests {
 
     @Test
     void msRead() {
-        User user = userMapper.selectById(1240210384322416642L);
+        User user = userMapper.selectById(1240558498887585793L);
         System.out.println(user);
     }
 
